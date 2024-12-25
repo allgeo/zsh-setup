@@ -1,36 +1,28 @@
-ZSH Setup  
-Install ZSH  
+#### Install ZSH  
+```sudo apt install zsh```  
 
-bash
-Copy code
-sudo apt install zsh
-chsh -s $(which zsh)
-Install Oh My Zsh
+#### Set ZSH as default shell 
+###### For Ubuntu/Pop!_OS/Debian-based systems:
+> Go to Preferences > your terminal profile > Command > check "Run custom command instead of my shell" and set it to ```zsh```
 
-bash
-Copy code
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-Install Plugins
+#### Install Oh My Zsh
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```  
 
-bash
-Copy code
+#### Install Plugins
+```
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-Update .zshrc:
+```
 
-bash
-Copy code
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-Install Nerd Font
-Download and install Fira Mono Nerd Font.
+```plugins=(git zsh-autosuggestions zsh-syntax-highlighting)```
 
-Install Powerlevel10k
+#### Download and install Fira Mono Nerd Font
+https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraMono/Regular
 
-bash
-Copy code
+#### Install Powerlevel10k and set theme 
+```
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-Update .zshrc:
-
-bash
-Copy code
+```
+```
 ZSH_THEME="powerlevel10k/powerlevel10k"
+```
